@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "titulo":"Anillo A",
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde excepturi vitae earum!",
+        "imagen": "anilloPre",
+        "genero": "hombre"
+    },
+    {
+        "id":2,
+        "titulo":"Anillo B",
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
+        "imagen": "anilloPre",
+        "genero": "mujer"
+    },
+    {
+        "id":3,
+        "titulo":"Anillo C",
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde excepturi vitae earum! Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "imagen": "RingCover",
+        "genero": "hombre"
+    },
+    {
+        "id":4,
+        "titulo":"Anillo D",
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde excepturi vitae earum! Lorem ipsum, dolor sit amet .",
+        "imagen": "RingPortada",
+        "genero": "mujer"
+    }
+]

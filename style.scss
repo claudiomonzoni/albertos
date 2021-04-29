@@ -1,59 +1,21 @@
+@use 'sass/forward' as *;
+
+// estilos del carrusel
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+// fuentes
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
-//vars
-//tonos
-$gris: #464646;
 
-//reset
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  background-color: $gris;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-
-h1,
-h2 {
-  font-weight: 700;
-}
-h3 {
-  font-weight: 300;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
 body {
   font-family: Montserrat;
   position: relative;
+  color: $gris;
 }
-a {
-// color: $gris;
+
+h1,
+h2,
+h3 {
+  font-family: "Source Serif Pro", serif;
 }
 .minmax {
   display: grid;
@@ -61,46 +23,460 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(max-content, 1fr));
 }
 
-//media query
-$cel: 479px;
-$nocel: 479px;
-$tableta: 768px;
-$tableta-land: 1024px;
-$hd: 1600px;
-
-@mixin cel {
-  @media (max-width: #{$cel}) {
-    @content;
+.conte {
+  max-width: 1600px;
+  margin: 0 auto;
+  @media screen and (max-width: 1600px) {
+    padding: 0 10vw;
   }
 }
 
-@mixin nocel {
-  @media (min-width: #{$nocel}) {
-    @content;
+#cover {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  position: relative;
+  @include cel {
+    flex-wrap: wrap;
+  }
+  img,
+  .bandejaFlex {
+    flex: 0 0 50%;
+    @include cel {
+      flex: 0 0 100%;
+    }
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  .bandejaFlex {
+    @include cel {
+      margin: 3em 0;
+    }
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    div {
+      width: 60%;
+      display: flex;
+      flex-wrap: wrap;
+      p {
+        margin: 2em 0;
+        flex: 1 0 100%;
+      }
+    }
+  }
+}
+#tarjetasHome {
+  display: flex;
+  flex-wrap: wrap;
+  transform: translateY(-25px);
+  -webkit-transform: translateY(-25px);
+}
+.tarjetaRing {
+  @include tarjetas("ima/RingTarjeta.png");
+}
+.tarjetaNecklaces {
+  @include tarjetas("ima/Necklaces_tarjetas.png");
+}
+.tarjetaPendant {
+  @include tarjetas("ima/Pendant_tarjeta.png");
+}
+
+.citaHome {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4em 0;
+  align-items: center;
+  justify-content: center;
+  @include cel {
+    text-align: center;
+  }
+  h2 {
+    padding: 0 0.4em;
+    @include cel {
+      flex: 1;
+      padding: 0 0 0.4em 0;
+    }
+  }
+  p {
+    margin: 1.5em 0;
   }
 }
 
-@mixin tableta_land {
-  @media (min-width: #{$tableta-land}) and (max-width: #{$hd - 1px}) {
-    @content;
+#gift {
+  display: flex;
+  @include cel {
+    flex-wrap: wrap;
+  }
+  .ima {
+    @include cel {
+      flex: 1 0 100%;
+    }
+    background-color: $beige;
+    flex: 1 0 40%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .bandeja {
+    flex: 1 0 50%;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    div {
+      width: 50%;
+      @include cel {
+        padding: 4em 0;
+        width: 70%;
+        text-align: center;
+      }
+    }
+    p {
+      margin: 1.5em 0;
+    }
+  }
+}
+.cancelarY {
+  transform: translateY(0px) !important;
+  -webkit-transform: translateY(0px) !important;
+}
+.margenTop {
+  margin-top: 4em;
+}
+#ship {
+  .conte {
+    display: flex;
+    transform: translateY(-25px);
+    -webkit-transform: translateY(-25px);
+    @include cel {
+      flex-wrap: wrap;
+    }
+    .bandeja {
+      @include cel {
+        flex: 1 0 100%;
+        padding: 4em 2em;
+      }
+      display: inherit;
+      justify-content: center;
+      align-items: center;
+      background-color: $beigeClaro;
+      padding: 2em;
+      div {
+        width: 80%;
+        p {
+          padding: 2em 0;
+        }
+      }
+    }
+    .ima {
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+      }
+      @include cel {
+        flex: 1 0 100%;
+      }
+    }
   }
 }
 
-@mixin tableta {
-  @media (min-width: #{$tableta - 1px}) and (max-width: #{$tableta-land - 1px}) {
-    @content;
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 30vh;
+  margin-top: 5em;
+  background-color: $beigeClaro;
+  li {
+    list-style: none;
+  }
+  .logo,
+  .ask {
+    display: inherit;
+    flex: 1;
+    @include cel {
+      flex: 1 1 100%;
+      height: 300px;
+      background-color: $beigeClaro;
+    }
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    .bandeja {
+      img {
+        width: 50%;
+        max-width: 200px;
+        height: auto;
+      }
+      p {
+        padding: 0.5em 0;
+      }
+      .social {
+        display: flex;
+      }
+      width: 60%;
+    }
+  }
+  .ask {
+    background-color: $azul;
+    color: $grisClaro;
+    .bandeja {
+      width: 60%;
+      display: inherit;
+      text-align: right;
+      div {
+        padding: 1em;
+        flex: 1 0 60%;
+      }
+    }
+    h2 {
+      color: $grisClaro;
+    }
+    .whats {
+      flex: 1 1 40%;
+      display: flex;
+    }
+    .whats a {
+      font-size: 4em;
+      color: $grisClaro;
+      &:hover {
+        color: $beige;
+      }
+    }
   }
 }
 
-@mixin hd {
-  @media (min-width: #{$hd}) {
-    @content;
+// HISTORY
+#coverHistory {
+  background-color: rgb(46, 43, 43);
+  flex: 0 0 50%;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  @include cel {
+    flex: 0 0 100%;
+  }
+
+  #paul {
+    @include cel {
+      flex-direction: column;
+      transform: translateX(0vw);
+      -webkit-transform: translateX(0vw);
+      width: 90%;
+      .bandeja {
+        height: 30vh;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    display: flex;
+    background-color: $beige;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-3vw);
+    -webkit-transform: translateX(-3vw);
+    .bandeja {
+      display: inherit;
+      justify-content: center;
+      font-family: "Source Serif Pro", serif;
+      font-size: 1.2em;
+    }
+    p {
+      width: 80%;
+    }
   }
 }
 
-//mixins
+#historyPhoto {
+  .conte {
+    @include cel {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      .bandeja {
+        padding: 3em 0;
+      }
+    }
 
-//nav
+    z-index: 100;
+    position: relative;
+    display: flex;
+    img,
+    .bandeja {
+      flex: 1 0 50%;
+    }
+    .bandeja {
+      display: inherit;
+      justify-content: center;
+      align-items: center;
+      div {
+        width: 70%;
+      }
+    }
+  }
+}
 
+#historiatxt {
+  background-color: $beige;
+  padding: 10vw 0;
+  transform: translateY(-5vh);
+  -webkit-transform: translateY(-5vh);
+  .conte {
+    @include cel {
+      column-count: 1;
+      p {
+        padding: 2em;
+      }
+    }
+    column-count: 2;
+  }
+}
 
-//clases y id
+.albertoHistory {
+  transform: translateY(-7vh);
+  .bandeja {
+    flex: 1 0 50%;
+  }
+}
+
+// contacto
+#formaContacto {
+  margin: 4em 0;
+  .conte {
+    display: flex;
+    flex-wrap: wrap;
+    #mapa {
+      flex: 1 1 50%;
+      @include cel {
+        height: 300px;
+      }
+    }
+    #formulario {
+      flex: 1 1 50%;
+      padding: 3em;
+      input,
+      textarea {
+        width: 100%;
+        background-color: $beige;
+        border: none;
+        border-radius: 2rem;
+        padding: 1em;
+        margin-bottom: 1em;
+      }
+      button {
+        margin: 1em 0;
+      }
+    }
+  }
+}
+
+// producto
+#descripciontxt {
+  background-color: $beigeClaro;
+  padding: 10vw 0;
+  transform: translateY(-5vh);
+  -webkit-transform: translateY(-5vh);
+  .conte {
+    @include cel {
+      column-count: 1;
+      p {
+        padding: 2em;
+      }
+    }
+    column-count: 2;
+  }
+}
+
+#Joyas {
+  background-color: $beigeClaro;
+  transform: translateY(-5vh);
+  -webkit-transform: translateY(-5vh);
+  padding-bottom: 10em;
+}
+#productosGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.producto {
+  position: relative;
+  flex: 0 0 25%;
+  @include cel {
+    flex: 0 0 50%;
+  }
+  border: solid 4px $beigeClaro;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  span {
+    position: absolute;
+    font-family: "Source Serif Pro", serif;
+    bottom: 6%;
+    right: 6%;
+    color: $grisClaro;
+    font-size: clamp(1em, 2vw, 2em);
+  }
+}
+
+// detalles
+#detalle {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 999;
+  top: 30vh;
+  left: calc(25vw);
+  background-color: #fff;
+  .imagen {
+    flex: 1 0 60%;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  .info {
+    display: inherit;
+    flex: 1 0 40%;
+    position: relative;
+    padding: 2em;
+    background-color: $azul;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    p {
+      padding: 1em 0;
+    }
+    hr {
+      border-top: solid 1px $grisClaro;
+      margin: 1em 0;
+    }
+    #cerrar{
+      position: absolute;
+      color: #fff;
+      top: 5%;
+      right: 10%;
+    }
+    .ask {
+      display: flex;
+      font-size: 3em;
+
+      h3,
+      a {
+        padding: 0 0.2em;
+        color: $grisClaro;
+        font-size: 1em;
+      }
+    }
+  }
+}

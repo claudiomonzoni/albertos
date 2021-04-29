@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Albertos Jewelry | Joyeria Zihuatanejo</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.scss" />
+  </head>
+  <body>
+    <div id="cuerpo">
+      <nav id="nav">
+        <button class="menu-toggle">Menu</button>
+        <div class="logo">
+          <a href="index.html">
+            <img src="ima/logointro.png" alt="Alberto's Jowelry Joyeria"
+          /></a>
+        </div>
+        <ul>
+          <li><a href="history.html">History</a></li>
+          <li><a href="#">Rings</a></li>
+          <li><a href="#">Necklaces</a></li>
+          <li><a href="#">Pendants</a></li>
+          <li><a href="#">Locations</a></li>
+        </ul>
+        <ul class="social">
+          <a href="#"> <i class="fab fa-facebook"></i></a>
+          <a href="#"> <i class="fab fa-instagram"></i></a>
+        </ul>
+      </nav>
+
+      <section>
+        <div id="cover">
+          <div class="bandejaFlex">
+            <div>
+              <h1>
+                Store <br />
+                Locations
+              </h1>
+              <p>Cuauhtémoc 12 y 15, Downtown Zihuatanejo, Gro. México.</p>
+              <a href="tel:755 554 2161" class="btn">Call: 755 554 2161</a>
+            </div>
+          </div>
+          <img
+            src="ima/JewelryZihuatanejoRingsCover2.jpg"
+            alt="Jewelry Location in Zihuatanejo"
+          />
+        </div>
+      </section>
+      <section id="formaContacto">
+        <div class="conte">
+          <div id="mapa">Aqui el mapa</div>
+          <div id="formulario">
+            <h2>Contact Us</h2>
+            <form action="#">
+              <label for="Name">Name
+                <input type="text" id="nameC" name="Name" />
+              </label>
+              <label for="Email">Email
+                <input type="text" id="emailC" name="Email" />
+              </label>
+              <label for="Phone">Phone
+                <input type="text" id="phoneC" name="Phone" />
+              </label>
+              <label for="How">How can we help you?
+                <textarea name="How" id="messageC" cols="30" rows="10"></textarea>
+              </label>
+              <button type="submit" class="btn" id="contactoBtn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="ship" class="margenTop">
+        <div class="conte cancelarY">
+          <div class="bandeja">
+            <div>
+              <h2>Worldwide shipping</h2>
+              <p>
+                A Certificate of Authenticity is included with the purchase of
+                each of Alberto’s exclusive designs.
+              </p>
+            </div>
+          </div>
+          <div class="ima">
+            <img
+              src="ima/AlbertosJewelryCrab.png"
+              alt="Worldwide shipping jewelry from Zihuatanejo"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="margenTop">
+        <div class="conte cancelarY" id="tarjetasHome">
+          <div class="tarjetaRing">
+            <h2>Rings</h2>
+            <p>Hand crafted pieces made with silver and gold.</p>
+            <a href="#"><img src="ima/flecha.svg" /></a>
+          </div>
+
+          <div class="tarjetaNecklaces">
+            <h2>Necklaces</h2>
+            <p>Unique and gorgeous necklances pieces.</p>
+            <a href="#"><img src="ima/flecha.svg" /></a>
+          </div>
+
+          <div class="tarjetaPendant">
+            <h2>Pendants</h2>
+            <p>Perfect and iconic designs jewelry art.</p>
+            <a href="#"><img src="ima/flecha.svg" /></a>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="logo">
+          <div class="bandeja">
+            <img src="ima/logointro.png" alt="Alberto's jewelry" />
+            <p>
+              Exclusive jewelry handcrafted by third generation of Mexican
+              artisans. Ixtapa Zihuatanejo
+            </p>
+            <div class="social">
+              <a href="#"> <i class="fab fa-facebook"></i></a>
+              <a href="#"> <i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ask">
+          <div class="bandeja">
+            <div>
+              <h2>Ask</h2>
+              <p>Contact us clicking WhatsApp icon to resolve any doubts</p>
+            </div>
+            <div class="whats">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- fin cuerpo -->
+  </body>
+  <script
+    defer
+    src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"
+  ></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
+  <script src="js/contacto.js"></script>
+  <script src="js/app.js"></script>
+</html>

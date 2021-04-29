@@ -1,0 +1,228 @@
+@use 'mediaQ' as *;
+@use 'color' as *;
+@use 'anima' as *;
+// Boton toogle
+.menu-toggle {
+  position: fixed;
+
+  display: none;
+  @include cel {
+    display: block;
+    z-index: 99000;
+  }
+  right: 4vh;
+  top: 4.6vh;
+  z-index: 520;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border-top: 4px solid;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 4px solid;
+  color: $gris;
+  font-size: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.menu-toggle:before,
+.menu-toggle:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: currentColor;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  -o-transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+
+button.is-active {
+  border-color: transparent;
+  border-left: none;
+}
+button.is-active:before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+button.is-active:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+
+// menu de navegación
+nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 900;
+  .logo {
+    padding: 1em;
+    max-width: 220px;
+    @include cel {
+      width: 240px;
+      margin-top: 0.7em;
+    }
+  }
+  // ultimo ul aplicar esta regla
+  ul + ul {
+    padding: 0 1em;
+  }
+  @include hd {
+    ul:nth-child(3n) {
+      flex: 1;
+      justify-content: space-evenly;
+      padding: 0 20%;
+    }
+  }
+  ul {
+    display: flex;
+    li {
+      padding: 0 0.5em;
+    }
+  }
+
+  @include cel {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 85px;
+    .logo {
+      align-self: flex-start;
+    }
+    ul:nth-child(3n) {
+      li {
+        padding: 1.5em 0;
+      }
+    }
+
+    ul:nth-child(2n) {
+      display: flex;
+      justify-content: center;
+    }
+
+    ul {
+      flex: 1 0 100%;
+      visibility: hidden;
+      display: none;
+      padding: 2em;
+    }
+  }
+}
+
+.social {
+  a{
+    font-size: 1.5em;
+    margin-right: 1em;
+    color: $azul;
+    @include cel{
+      font-size: 2.5em;
+    }
+
+    &:hover {
+      @extend .anima;
+      color: $beige;
+    }
+  }
+}
+.btn {
+  border: solid 1px $gris;
+  padding: 0.8em 1.5em;
+  border-radius: 4em;
+  display: inline-block;
+  &:hover {
+    @extend .anima;
+    background-color: $azul;
+    border: none;
+    color: #fff;
+  }
+}
+.btnInvertido {
+  @extend .btn;
+  border: solid 1px $grisClaro;
+  color: $grisClaro;
+  &:hover {
+    @extend .anima;
+    background-color: $gris;
+    border: none;
+    color: #fff;
+  }
+}
+// agregamos padding a todo lo que este debajo de nav
+
+nav + section {
+  padding-top: 73px;
+}
+
+@mixin tarjetas($fondo) {
+  position: relative;
+  background-image: url($fondo);
+  flex: 1;
+  @include cel {
+    flex: 1 1 auto;
+  }
+  background-color: $beigeClaro;
+  transform: scale(1);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  text-align: right;
+  padding: 2em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  // height:clamp(450px, 5vw, 600px);
+  height: calc((100vh / 100) * 50);
+  @include tableta {
+    height: calc((100vh / 100) * 40);
+  }
+  h2 {
+    flex: 0 0 auto;
+    font-size: clamp(2em, 5vw, 3em);
+    color: $azul;
+  }
+  p {
+    width: 70%;
+    margin: 2em 0;
+  }
+  a {
+    position: absolute;
+    bottom: 2em;
+    img {
+      max-width: 40px;
+    }
+  }
+
+  &:hover {
+    @extend .anima;
+    background-color: $azul;
+    transform: scale(1.05);
+    z-index: 100;
+    h2,
+    p {
+      color: #fff;
+    }
+  }
+}
