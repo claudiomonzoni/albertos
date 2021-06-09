@@ -1,0 +1,39 @@
+[
+    {
+        "id":1,
+        "titulo":"Earring A",
+        "descripcion": "Silver earrings with Pearls. Handmade Piece.",
+        "imagen": "alebertos-jewelry-pendant-1",
+        "genero": "mujer"
+    },
+    {
+        "id":2,
+        "titulo":"Earring B",
+        "descripcion": "Square Blue Topaz in organic design.",
+        "imagen": "alebertos-jewelry-pendant-2",
+        "genero": "mujer"
+    },
+        
+        {
+            "id":5,
+            "titulo":"Bracelet E",
+            "descripcion": "Round blue topaz in a one of a kind piece in silver.",
+            "imagen": "alebertos-jewelry-ring-5",
+            "genero": "mujer"
+        },
+
+        {
+            "id":2,
+            "titulo":"Bracelet C",
+            "descripcion": "Silver bracelet in Organic design",
+            "imagen": "alebertos-jewelry-necklace-3",
+            "genero": "mujer"
+        },
+        {
+            "id":4,
+            "titulo":"Bracelet D",
+            "descripcion": "Leather Silver and Gold bracelet in Aztec Design.",
+            "imagen": "alebertos-jewelry-necklace-4",
+            "genero": "hombre"
+        }
+    ]

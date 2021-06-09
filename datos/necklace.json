@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "titulo":"Necklace A",
+        "descripcion": "Unique piece with Pearl, Citrine, Peridot, Blue Topaz, Amethist and Mexican fire Opal. Handmade piece.",
+        "imagen": "alebertos-jewelry-necklace-1",
+        "genero": "mujer"
+    },
+    {
+        "id":2,
+        "titulo":"Necklace B",
+        "descripcion": "Oxydized Silver bracelet in organic design.",
+        "imagen": "alebertos-jewelry-necklace-5",
+        "genero": "mujer"
+    },
+    {
+        "id":3,
+        "titulo":"Necklace C",
+        "descripcion": "Organic silver bracelet",
+        "imagen": "alebertos-jewelry-necklace-6",
+        "genero": "mujer"
+    },
+    {
+        "id":3,
+        "titulo":"Pendant A",
+        "descripcion": "Pearl in silver and 18K Gold, with 3 Diamonds (0.10 each one)",
+        "imagen": "alebertos-jewelry-pendant-3",
+        "genero": "mujer"
+    },
+    {
+        "id":4,
+        "titulo":"Pendant B",
+        "descripcion": "Silver cross in organic design",
+        "imagen": "alebertos-jewelry-pendant-4",
+        "genero": "hombre"
+    },
+    {
+        "id":6,
+        "titulo":"Pendant C",
+        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde excepturi vitae earum! Lorem ipsum, dolor sit amet .",
+        "imagen": "alebertos-jewelry-pendant-6",
+        "genero": "mujer"
+    }
+]

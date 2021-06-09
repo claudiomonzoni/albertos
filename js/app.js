@@ -70,44 +70,11 @@ if (divmapa) {
   });
 }
 
-// import producto from './joyas'
-const detalle = document.getElementById("detalles");
-const producto = document.getElementsByClassName("producto");
-const productoGrid = document.getElementById("productosGrid");
-const filtro = document.getElementById("filtro");
 
-//obtengo los datos
-//  import url from "../datos/rings.json"
-//  console.log(url)
+// seccion de joyas
+const divAnillos = document.getElementById("anillos");
+import {logicaJoya} from './joyas'
+if(divAnillos){
+logicaJoya()
+}
 
-// const url = "https://api.npoint.io/e4f205f4adc7bb5a842a"
-
-// import imas from '../ima/*.png';
-const imas = require("../ima/*.png");
-import("../datos/rings.json")
-  .then((res) => {
-    return res;
-  })
-  .then((joyas) => {
-    //llamo funcion para generar los thumbs
-    thumbs(joyas);
-  });
-
-const thumbs = (data) => {
-  data.forEach((element) => {
-    productoGrid.innerHTML += `
-  <div class="producto">
-   <a href="#">
-   <img src="${imas[element.imagen]}" alt="${element.titulo}" />
-   <span>${element.titulo}</span>
-   </a>
-  </div>`;
-  });
-};
-
-//   <div class="producto">
-//   <a href="#">
-//     <img src="ima/anilloPre.png" alt="Ring 12" />
-//     <span>Ring 12</span>
-//   </a>
-// </div>

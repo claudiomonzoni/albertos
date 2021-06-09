@@ -179,6 +179,7 @@ nav + section {
   position: relative;
   background-image: url($fondo);
   flex: 1;
+  min-height: 400px;
   @include cel {
     flex: 1 1 auto;
   }
@@ -207,7 +208,7 @@ nav + section {
     width: 70%;
     margin: 2em 0;
   }
-  a {
+  .flechaCard {
     position: absolute;
     bottom: 2em;
     img {
@@ -223,6 +224,88 @@ nav + section {
     h2,
     p {
       color: #fff;
+    }
+  }
+}
+.mostrar{
+  opacity: 1!important;
+  pointer-events: initial!important;
+}
+#contePop{
+opacity: 0;
+pointer-events: none;
+  height: 100vw;
+  width: 100%;
+  background-color:rgba(0,0,0,.9);
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 999;
+  @extend .anima;
+  @include cel{
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+// detalles
+#detalle {
+  position: fixed;
+  width: 50vw;
+  @include cel{
+    width: 80vw;
+    top: 6vh;
+    left: calc(10vw);
+  }
+  display: flex;
+  flex-wrap: wrap;
+  top: 30vh;
+  left: calc(25vw);
+  background-color: #fff;
+  .imagen {
+    flex: 1 0 60%;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  .info {
+    display: inherit;
+    flex: 1 0 40%;
+    position: relative;
+    padding: 2em;
+    background-color: $azul;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    @include cel{
+      font-size: 0.9em;
+    }
+    p {
+      padding: 1em 0;
+    }
+    hr {
+      border-top: solid 1px $grisClaro;
+      margin: 1em 0;
+    }
+    #cerrar {
+      position: absolute;
+      color: #fff;
+      top: 5%;
+      right: 10%;
+    }
+    .ask {
+      display: flex;
+      font-size: 3em;
+      @include cel{
+        font-size: 2em;
+}
+      h3,
+      a {
+        padding: 0 0.2em;
+        color: $grisClaro;
+        font-size: 1em;
+      }
     }
   }
 }

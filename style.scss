@@ -33,6 +33,7 @@ h3 {
 
 #cover {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   z-index: 100;
   position: relative;
@@ -41,14 +42,14 @@ h3 {
   }
   img,
   .bandejaFlex {
-    flex: 0 0 50%;
+    flex: 0 1 50%;
     @include cel {
       flex: 0 0 100%;
     }
   }
   img {
     object-fit: cover;
-    width: 100%;
+    width: 50%;
     height: auto;
   }
   .bandejaFlex {
@@ -71,6 +72,8 @@ h3 {
 }
 #tarjetasHome {
   display: flex;
+  position: relative;
+  z-index: 500;
   flex-wrap: wrap;
   transform: translateY(-25px);
   -webkit-transform: translateY(-25px);
@@ -175,6 +178,9 @@ h3 {
     .ima {
       img {
         height: 100%;
+        @include cel {
+          height: auto;
+        }
         width: auto;
         object-fit: cover;
       }
@@ -253,9 +259,12 @@ footer {
 
 // HISTORY
 #coverHistory {
-  background-color: rgb(46, 43, 43);
+  background: url(./ima/fondo-historia.jpg) no-repeat;
+  background-size: cover;
+  background-position: 100% 0;
   flex: 0 0 50%;
   height: 100vh;
+  max-height: 800px;
   align-items: center;
   display: flex;
   @include cel {
@@ -425,58 +434,23 @@ footer {
   }
 }
 
-// detalles
-#detalle {
-  display: none;
-  visibility: hidden;
-  position: fixed;
-  width: 50vw;
+.filtro {
   display: flex;
-  flex-wrap: wrap;
-  z-index: 999;
-  top: 30vh;
-  left: calc(25vw);
-  background-color: #fff;
-  .imagen {
-    flex: 1 0 60%;
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
+  padding-bottom: 3em;
+  padding-top: 1em;
+  font-family: "Source Serif Pro", serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  border-top: solid 1px $grisClaro;
+  justify-content: center;
+  h4 {
+    text-decoration: underline;
   }
-  .info {
-    display: inherit;
-    flex: 1 0 40%;
-    position: relative;
-    padding: 2em;
-    background-color: $azul;
-    color: #fff;
-    align-items: center;
-    justify-content: center;
-    p {
-      padding: 1em 0;
-    }
-    hr {
-      border-top: solid 1px $grisClaro;
-      margin: 1em 0;
-    }
-    #cerrar{
-      position: absolute;
-      color: #fff;
-      top: 5%;
-      right: 10%;
-    }
-    .ask {
-      display: flex;
-      font-size: 3em;
-
-      h3,
-      a {
-        padding: 0 0.2em;
-        color: $grisClaro;
-        font-size: 1em;
-      }
-    }
+  a {
+    padding: 0 0.5em;
   }
+}
+.activado {
+  color: $azul;
+  font-weight: bold;
 }

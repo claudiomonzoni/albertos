@@ -1,30 +1,65 @@
 [
     {
         "id":1,
-        "titulo":"Anillo A",
-        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde excepturi vitae earum!",
-        "imagen": "anilloPre",
+        "titulo":"Rings A",
+        "descripcion": "Silver ring with 18k gold and 0.10 diamond karat.",
+        "imagen": "alebertos-jewelry-ring-1",
         "genero": "hombre"
     },
     {
-        "id":2,
-        "titulo":"Anillo B",
-        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-        "imagen": "anilloPre",
-        "genero": "mujer"
-    },
-    {
         "id":3,
-        "titulo":"Anillo C",
-        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde excepturi vitae earum! Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-        "imagen": "RingCover",
+        "titulo":"Rings B",
+        "descripcion": "Handmade Silver ring with 18k gold and Australian opal (Marquise).",
+        "imagen": "alebertos-jewelry-ring-3",
         "genero": "hombre"
     },
     {
         "id":4,
-        "titulo":"Anillo D",
-        "descripcion": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde excepturi vitae earum! Lorem ipsum, dolor sit amet .",
-        "imagen": "RingPortada",
+        "titulo":"Rings C",
+        "descripcion": "Handmade silver ring with 18k and Australian opal.",
+        "imagen": "alebertos-jewelry-ring-4",
+        "genero": "mujer"
+    },
+    {
+        "id":6,
+        "titulo":"Rings D",
+        "descripcion": "Oval Ruby in silver and 18k gold with beads.",
+        "imagen": "alebertos-jewelry-ring-6",
+        "genero": "hombre"
+    },
+    {
+        "id":7,
+        "titulo":"Rings E",
+        "descripcion": "Square Citrine in silver ring. Handamade piece.",
+        "imagen": "alebertos-jewelry-ring-7",
+        "genero": "hombre"
+    },
+    {
+        "id":8,
+        "titulo":"Rings F",
+        "descripcion": "Organic design in silver 0.925",
+        "imagen": "alebertos-jewelry-ring-8",
+        "genero": "hombre"
+    },
+    {
+        "id":9,
+        "titulo":"Rings G",
+        "descripcion": "Organic designin silver 0.925",
+        "imagen": "alebertos-jewelry-ring-9",
+        "genero": "hombre"
+    },
+    {
+        "id":10,
+        "titulo":"Rings H",
+        "descripcion": "Two Pesos Mexican Gold Coin (22k) in silver ring. Handmade piece",
+        "imagen": "alebertos-jewelry-ring-10",
+        "genero": "hombre"
+    },
+    {
+        "id":10,
+        "titulo":"Rings I",
+        "descripcion": "Silver ring with Australian Opal. Handmade piece.",
+        "imagen": "alebertos-jewelry-ring-11",
         "genero": "mujer"
     }
 ]
